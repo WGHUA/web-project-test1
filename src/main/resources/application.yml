@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    username: root
+    password: wughroot
+    # 若是时区报错则添加参数：serverTimezone=Asia/Shanghai&
+    url: jdbc:mysql://localhost:3306/my_db_test?useUnicode=true&characterEncoding=utf-8
+    # 使用com.mysql.jdbc.Driver测试datasource.getClass()表示过时，可使用com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  #type-aliases-package: com.wgh.mapper
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+

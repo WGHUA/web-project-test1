@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wgh.mapper.StudentOneMapper">
+
+    <select id="getStudentInfo" resultType="com.wgh.bean.StudentOne">
+        SELECT * FROM student_one
+    </select>
+
+    <insert id="saveStudentInfo">
+        INSERT INTO student_one (name,age) values (#{name},#{age})
+    </insert>
+
+</mapper>
